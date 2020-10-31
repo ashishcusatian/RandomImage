@@ -11,7 +11,7 @@ import java.util.List;
 public interface ImageRepository extends MongoRepository<ImageDetails, String> {
 
 
-    @Query(fields="{ '_id' : 1, 'imageUrl' : 1}")
+    @Query(value="{}", fields="{ blob : 0}")
      List<ImageDetails> findAll();
 
 }
